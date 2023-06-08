@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    border: 1px solid red;
+    height: 35rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #de9847, #f2eb5b);
+}
+
+.meal_wrapper {
+    border: 1px solid rgb(39, 6, 6);
+    padding: 9rem;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    max-width: 1280px;
+    display: flex;
+    /* align-items: center; */
+}
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+
+.text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.meal-search-box {
+    border: 1px solid rgb(49, 66, 86);
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
+    padding: 0.8rem 8rem;
+}
+
+.search-content,
+.search-btn {
+    width: 100%;
+    display: flex;
+}
+
+.search-content {
+    padding: 0 1rem;
+    width: 35rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid #de9847;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    display: flex;
+}
+
+.search-content::placeholder {
+    color: #de9847;
+}
+
+.search-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    background-color: #f2eb5b;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.meal-result {
+    /* border: 1px solid pink; */
+    display: block;
+    /* margin-left: 0.8rem;
+    margin-right: 0.8rem; */
+    overflow: hidden;
+    margin: 0 4rem;
+    transition: 0.2s;
+    /* justify-content: center;
+    align-items: center; */
+    /* text-align: center; */
+
+}
+
+.meal-result .title {
+    /* display: block; */
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    /* border: 1px solid; */
+
+}
+
+
+.meal-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 1rem;
+    /* width: 300px;
+    height: 600px; */
+    background-size: cover;
+    /* height: 600px; */
+    /* height: auto; */
+    /* justify-content: center;
+    align-items: center; */
+    /* display: block; */
+    border: 1px solid rgb(35, 197, 110);
+}
+
+.meal-img .card_img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* object-fit: cover; */
+
+}
+
+.meal-image {
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    /* display: block; */
+}
+
+.meal-name {
+    display: inline-block;
+
+    text-align: center;
+    width: 100%;
+    border: 1px solid red;
+    padding: 1.5rem 0.5rem;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+    /* margin-bottom: 3rem; */
+}
+
+.meal-name h3 {
+    margin-bottom: 1.2rem;
+}
+
+.recipe-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #de9847;
+    padding: 0.7rem 2rem;
+    margin-top: 10px;
+    border: 1px solid red;
+    border-radius: 2rem;
+    /* display: block; */
+
+}
+
+
+
+/* .meal-details-content p:not(.recipe-category) {
+    padding: 1rem 0;
+} */
+
+.meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: #de9847;
+    border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    /* display: none; */
+    padding: 2rem 0;
+    /* align-items: center;
+    justify-content: center; */
+    display: none;
+
+}
+
+/* .meal-details::-webkit-scrollbar-thumb {
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+} */
+
+
+
+/* .meal-details-content {
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+} */
+.meal-details-content h2,
+p {
+    text-align: center;
+}
+
+.showRecipe {
+    display: block;
+}
+
+.meal-details-content p:not(.recipe-category) {
+    padding: 1rem 0;
+}
+
+.recipe-close-btn {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    display: block;
+}
+
+.recipe-category {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    font-weight: 600;
+    color: #de9847;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.recipe-instruct {
+    padding: 1rem;
+    text-align: center;
+}
+
+.recipe-meal-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.recipe-link {
+    text-align: center;
+    margin: 1.4rem;
+}
+
+.recipe-link a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4 linear;
+}
+
+.recipe-link a:hover {
+    opacity: 0.8;
+}
+
+.notFound {
+    grid-template-columns: 1fr !important;
+    color: #de9847;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 680px) {
+    .meal-search-box {
+        width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #meal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .meal-item {
+        margin: 0;
+    }
+
+    .meal-details {
+        width: 700px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+    #meal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
